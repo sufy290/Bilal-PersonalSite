@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Photo-Album</title>
+    <link rel="icon" href="facicon.ico">
+
+    <!-- fontawesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+
+    <!-- Link css file -->
+    <link rel="stylesheet" href="gallary.css">
+
+    <!-- magnific pop up css cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css">
+    
+    <!-- Bootstrap 4 css cdn -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+    <!-- Bootstrap 4 js cdn -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+<body style="background-color: #eee;">
+
+    
+
+      <div>
+      <h1 class="h1" style="text-align:center; margin:10px; padding: 10px;"> <span><i class="far fa-images"></i></span> Photo-Album</h1>
+        </div>
+
+    <div class="gallary">
+        
+      
+
+        <!-- Giving below class name as datafilter name for division -->
+
+        <div class="image-container">
+            <a href="images/IMG-20211125-WA0000.jpg" class="image Dhoti">
+            <img src="images/IMG-20211125-WA0000.jpg" alt="" srcset="" height="250px" width="250px">
+            </a>
+            <a href="images/IMG-20211125-WA0001.jpg" class="image Dhoti">
+                <img src="images/IMG-20211125-WA0001.jpg" alt="" srcset="" height="250px" width="250px">
+            </a>
+            <a href="images/IMG-20211125-WA0002.jpg" class="image Dhoti">
+                <img src="images/IMG-20211125-WA0002.jpg" alt="" srcset="" height="250px" width="250px">
+            </a>
+
+            <a href="images/IMG-20211125-WA0003.jpg" class="image Top">
+                <img src="images/IMG-20211125-WA0003.jpg" alt="" srcset="" height="250px" width="250px">
+            </a>
+            <a href="images/IMG-20211125-WA0004.jpg" class="image Top">
+                <img src="images/IMG-20211125-WA0004.jpg" alt="" srcset="" height="250px" width="250px">
+            </a> 
+            <a href="images/IMG-20211125-WA0010.jpg" class="image Top">
+                <img src="images/IMG-20211125-WA0010.jpg" alt="" srcset="" height="250px" width="250px">
+            </a>
+
+            <a href="images/IMG-20211125-WA0011.jpg" class="image Plazo">
+                <img src="images/IMG-20211125-WA0011.jpg" alt="" srcset="" height="250px" width="250px">
+            </a>
+            <a href="images/IMG-20211125-WA0012.jpg" class="image Lengis">
+                <img src="images/IMG-20211125-WA0012.jpg" alt="" srcset="" height="250px" width="250px">
+            </a>
+
+            <a href="images/IMG-20211125-WA0013.jpg" class="image Capri">
+                <img src="images/IMG-20211125-WA0013.jpg" alt="" srcset="" height="250px" width="250px">
+            </a>
+
+            <a href="images/IMG-20211125-WA0014.jpg" class="image Capri">
+                <img src="images/IMG-20211125-WA0014.jpg" alt="" srcset="" height="250px" width="250px">
+            </a>
+
+            <a href="images/IMG-20211125-WA0015.jpg" class="image Capri">
+                <img src="images/IMG-20211125-WA0015.jpg" alt="" srcset="" height="250px" width="250px">
+            </a>
+        </div>
+
+    </div>
+
+    <!-- jquery cdn link -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <!-- magnific pop up js cdn link -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js"></script>
+
+<!-- jsfile link -->
+<script src="gallary.js"></script>
+
+<script>
+    $(document).ready(function(){
+        $('.buttons').click(function(){
+            $(this).addClass('active').siblings().removeClass('active');
+
+            var filter = $(this).attr('data-filter')
+
+             if(filter == 'all'){
+                 $('.image').show(400);
+             }
+             else{
+                 $('.image').not('.'+filter).hide(200);
+                 $('.image').filter('.'+filter).show(400);
+             }
+        });
+
+        $('.gallary').magnificPopup({
+            delegate:'a',
+            type:'image',
+            gallery:{
+                enabled:true
+            }
+        });
+    });
+</script>
+
+</body>
+<hr>
+
+<footer class="footer">
+   <p class="footer" style="text-align: center;">&copy;Bilal-Party All rights reserved.</p> 
+</footer>
+
+</html>
+

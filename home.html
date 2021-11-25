@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bilal Party Profile.</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="gallary.css">
+</head>
+<body>
+<!-- header section ends -->
+
+<!-- content section starts  -->
+
+<div class="container">
+
+    <section class="home" id="home">
+
+        <h3>hi there...</h3>
+        <h3 class="name">my name is <span>Bilal Party.</span></h3>
+        <h3 class="post">i am a <span class="typing-text">Influencer.</span></h3>
+
+        <a href="https://api.whatsapp.com/send?phone=+919106465454"><button class="btn">Talk To Me❤️</button></a>
+
+        <div class="share">
+            <a href="https://www.facebook.com/profile.php?id=100007156381790" class="fab fa-facebook-f"></a>
+            
+            <a href="https://www.instagram.com/bilal_party/" class="fab fa-instagram"></a>
+            
+        </div>
+
+    </section>
+
+    
+
+    
+    
+    
+</div>
+
+<!-- content section ends -->
+
+
+
+
+<!-- type.js cdn link  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+
+<script>
+
+    var type = new Typed('.typing-text',{
+        strings : [ 'Businessman', 'Influencer', 'Biker', 'Model' ],
+        typeSpeed: 120,
+        loop:true
+    });
+
+    let themeColor = document.querySelectorAll('.theme-toggler span');
+    themeColor.forEach(color => color.addEventListener('click', () =>{
+        let background = color.style.background;
+        document.querySelector('body').style.background = background;
+    }));
+
+</script>
+
+
+</body>
+
+
+</html>
