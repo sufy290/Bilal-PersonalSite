@@ -23,7 +23,7 @@
     <h1 class="heading">About Me</h1>
 
     <div class="content col-sm-6">
-        <h3 class="name">my name is <span>Bilal Party</span></h3>
+        <h3 class="name"><span>Bilal Party</span></h3>
         <p>You can call me party.</p>
         <p>Be a better Communicator.</p>
     </div>
@@ -50,6 +50,26 @@
 
 
 </section>
+<!-- theme toggler  -->
+
+<div class="theme-toggler">
+    <span style="background: linear-gradient(deeppink, purple);"></span>
+    <span style="background: linear-gradient(lightgreen, crimson);"></span>
+    <span style="background:linear-gradient(blueviolet, deeppink)"></span>
+    <span style="background:linear-gradient(coral, blueviolet)"></span>
+    <span style="background:linear-gradient(#999, #111)"></span>
+</div>
+
+
+<!-- type.js cdn link  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+<script>
+    let themeColor = document.querySelectorAll('.theme-toggler span');
+    themeColor.forEach(color => color.addEventListener('click', () =>{
+        let background = color.style.background;
+        document.querySelector('body').style.background = background;
+    }));
+</script>
 
 </body>
 

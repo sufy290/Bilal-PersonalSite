@@ -23,8 +23,8 @@
 
     <section class="home" id="home">
 
-        <h3>hi there...</h3>
-        <h3 class="name">my name is <span>Bilal Party.</span></h3>
+        
+        <h3 class="name"><span>Bilal Party.</span></h3>
         <h3 class="post">i am a <span class="typing-text">Influencer.</span></h3>
 
         <a href="https://api.whatsapp.com/send?phone=+919106465454"><button class="btn">Talk To Me❤️</button></a>
@@ -46,7 +46,15 @@
 </div>
 
 <!-- content section ends -->
+<!-- theme toggler  -->
 
+<div class="theme-toggler">
+    <span style="background: linear-gradient(deeppink, purple);"></span>
+    <span style="background: linear-gradient(lightgreen, crimson);"></span>
+    <span style="background:linear-gradient(blueviolet, deeppink)"></span>
+    <span style="background:linear-gradient(coral, blueviolet)"></span>
+    <span style="background:linear-gradient(#999, #111)"></span>
+</div>
 
 
 
@@ -61,7 +69,11 @@
         loop:true
     });
 
-    
+    let themeColor = document.querySelectorAll('.theme-toggler span');
+    themeColor.forEach(color => color.addEventListener('click', () =>{
+        let background = color.style.background;
+        document.querySelector('body').style.background = background;
+    }));
 
 </script>
 
